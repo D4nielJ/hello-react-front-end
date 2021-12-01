@@ -16,6 +16,7 @@ const greetingSlice = createSlice({
     builder
       .addCase(fetchGreeting.fulfilled, (state, action) => {
         state.entities = [action.payload];
+        state.loading = 'idle';
       })
       .addCase(fetchGreeting.pending, (state) => {
         if (state.loading === 'idle') {
