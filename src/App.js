@@ -6,20 +6,18 @@ import { ChakraProvider } from '@chakra-ui/react';
 import store from './redux/configureStore';
 import Greeting from './components/Greeting';
 
-const App = () => {
-  return (
-    <React.StrictMode>
-      <Provider store={store}>
-        <ChakraProvider>
-          <Router>
-            <Routes>
-              <Route path='/*' element={<Greeting />} />
-            </Routes>
-          </Router>
-        </ChakraProvider>
-      </Provider>
-    </React.StrictMode>
-  );
-};
+const App = () => (
+  <React.StrictMode>
+    <Provider store={store}>
+      <ChakraProvider>
+        <Router>
+          <Routes>
+            <Route path="/*" element={<Greeting />} />
+          </Routes>
+        </Router>
+      </ChakraProvider>
+    </Provider>
+  </React.StrictMode>
+);
 
 export default App;
